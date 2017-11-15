@@ -25,26 +25,53 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIm-Bf-bNG">
-                                <rect key="frame" x="154" y="186" width="66" height="36"/>
+                                <rect key="frame" x="137" y="185" width="100" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="d9V-VX-oOz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Begin"/>
+                                <state key="normal" title="Calculate"/>
                                 <connections>
                                     <action selector="beginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IMN-mE-CXo"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fdX-zd-WTo">
+                                <rect key="frame" x="137" y="317" width="100" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="rKj-8N-X9U"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gIN-sD-6iV">
+                                <rect key="frame" x="137" y="260" width="100" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Sml-nG-fmR"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mIm-Bf-bNG" firstAttribute="top" secondItem="zOX-hT-WKp" secondAttribute="bottom" constant="49" id="19m-PG-NPh"/>
+                            <constraint firstItem="mIm-Bf-bNG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2mQ-lj-AcD"/>
                             <constraint firstItem="mIm-Bf-bNG" firstAttribute="centerX" secondItem="zOX-hT-WKp" secondAttribute="centerX" id="55j-JM-KpH"/>
-                            <constraint firstItem="mIm-Bf-bNG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="biJ-wv-g1L"/>
-                            <constraint firstItem="zOX-hT-WKp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cLk-NH-Kmn"/>
+                            <constraint firstItem="gIN-sD-6iV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pzm-ME-s1W"/>
+                            <constraint firstItem="gIN-sD-6iV" firstAttribute="top" secondItem="mIm-Bf-bNG" secondAttribute="bottom" constant="39" id="arp-T9-r4k"/>
+                            <constraint firstItem="fdX-zd-WTo" firstAttribute="top" secondItem="gIN-sD-6iV" secondAttribute="bottom" constant="27" id="c6d-eu-tWz"/>
                             <constraint firstItem="zOX-hT-WKp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="jaF-k3-Gza"/>
-                            <constraint firstItem="mIm-Bf-bNG" firstAttribute="top" secondItem="zOX-hT-WKp" secondAttribute="bottom" constant="50" id="lAu-9H-suQ"/>
-                            <constraint firstItem="mIm-Bf-bNG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="zjN-Vr-6dq"/>
+                            <constraint firstItem="fdX-zd-WTo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uEE-Iq-asd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="Text1" destination="gIN-sD-6iV" id="OHM-y1-l28"/>
+                        <outlet property="Text2" destination="fdX-zd-WTo" id="OvE-F5-iDS"/>
                         <outlet property="theLabel" destination="zOX-hT-WKp" id="oDz-8V-LWY"/>
                     </connections>
                 </viewController>

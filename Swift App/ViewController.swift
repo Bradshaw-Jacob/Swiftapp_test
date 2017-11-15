@@ -12,13 +12,14 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var theLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var Text1: UITextField!
     
-    @IBAction func beginButton(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 10 {
-            theLabel.text = "Stop tapping and RELAX!"
-        }
+    
+    @IBOutlet weak var Text2: UITextField!
+    
+    
+    @IBAction func beginButton(_ sender: AnyObject) {
+        theLabel.text = "\(Double(Text1.text!)! * Double(Text2.text!)!)"
     }
     
     
