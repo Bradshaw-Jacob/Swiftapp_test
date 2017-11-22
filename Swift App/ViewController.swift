@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var theLabel: UILabel!
     
     @IBOutlet weak var Text1: UITextField!
@@ -19,7 +19,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func beginButton(_ sender: AnyObject) {
-        theLabel.text = "\(Double(Text1.text!)! * Double(Text2.text!)!)"
+        
+        let addition = true
+        
+        if addition {
+            theLabel.text = "\(Double(Text1.text!)! + Double(Text2.text!)!)"
+        }
+        else {
+            theLabel.text = "\(Double(Text1.text!)! - Double(Text2.text!)!)"
+        }
     }
     
     
@@ -29,12 +37,12 @@ class ViewController: UIViewController {
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
